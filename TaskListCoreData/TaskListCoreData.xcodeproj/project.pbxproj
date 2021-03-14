@@ -11,7 +11,6 @@
 		E7C90D5825FBD2A9008C1913 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C90D5725FBD2A9008C1913 /* SceneDelegate.swift */; };
 		E7C90D6025FBD2A9008C1913 /* TaskListCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7C90D5E25FBD2A9008C1913 /* TaskListCoreData.xcdatamodeld */; };
 		E7C90D6225FBD2AA008C1913 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C90D6125FBD2AA008C1913 /* Assets.xcassets */; };
-		E7C90D8625FBD4AB008C1913 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C90D7625FBD4AB008C1913 /* Task.swift */; };
 		E7C90D8725FBD4AB008C1913 /* Extension + NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C90D7825FBD4AB008C1913 /* Extension + NSObject.swift */; };
 		E7C90D8825FBD4AB008C1913 /* Extension + UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C90D7925FBD4AB008C1913 /* Extension + UITableView.swift */; };
 		E7C90D8925FBD4AB008C1913 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C90D7B25FBD4AB008C1913 /* StorageManager.swift */; };
@@ -29,7 +28,6 @@
 		E7C90D5F25FBD2A9008C1913 /* TaskListCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskListCoreData.xcdatamodel; sourceTree = "<group>"; };
 		E7C90D6125FBD2AA008C1913 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7C90D6625FBD2AA008C1913 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7C90D7625FBD4AB008C1913 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		E7C90D7825FBD4AB008C1913 /* Extension + NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension + NSObject.swift"; sourceTree = "<group>"; };
 		E7C90D7925FBD4AB008C1913 /* Extension + UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension + UITableView.swift"; sourceTree = "<group>"; };
 		E7C90D7B25FBD4AB008C1913 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 			children = (
 				E7C90D8325FBD4AB008C1913 /* Cells */,
 				E7C90D7725FBD4AB008C1913 /* Extensions */,
-				E7C90D7525FBD4AB008C1913 /* Models */,
 				E7C90D7C25FBD4AB008C1913 /* Screens */,
 				E7C90D7A25FBD4AB008C1913 /* Services */,
 				E7C90D7225FBD2B9008C1913 /* SupportingFiles */,
@@ -90,14 +87,6 @@
 				E7C90D6625FBD2AA008C1913 /* Info.plist */,
 			);
 			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
-		E7C90D7525FBD4AB008C1913 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				E7C90D7625FBD4AB008C1913 /* Task.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		E7C90D7725FBD4AB008C1913 /* Extensions */ = {
@@ -216,7 +205,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7C90D8625FBD4AB008C1913 /* Task.swift in Sources */,
 				E7C90D5625FBD2A9008C1913 /* AppDelegate.swift in Sources */,
 				E7C90D8D25FBD4AB008C1913 /* TaskTableViewCell.swift in Sources */,
 				E7C90D5825FBD2A9008C1913 /* SceneDelegate.swift in Sources */,
