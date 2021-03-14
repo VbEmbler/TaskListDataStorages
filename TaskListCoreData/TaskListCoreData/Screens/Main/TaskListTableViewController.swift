@@ -11,36 +11,41 @@ import UIKit
 class TaskListTableViewController: UITableViewController {
 
     //MARK: - Private Properties
-    private let dataManager = DataManager.shared
+    private let storageManager = StorageManager.shared
+    private var taskList: [Task] = []
     private var alertViewController: UIAlertController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerNib(with: TaskTableViewCell.self)
         tableView.tableFooterView = UIView()
+        
+        taskList = storageManager.getTasks()
     }
-   
+    
     // MARK: - Ovveride Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        dataManager.tasks.count
+        taskList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: TaskTableViewCell.self)
-        cell.taskLabel.text = dataManager.tasks[indexPath.row].text
+        cell.taskLabel.text = taskList[indexPath.row].text
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let taskName = dataManager.tasks[indexPath.row].text
+        let taskName = taskList[indexPath.row].text ?? ""
         showAddEditView(isEdit: true, indexPath: indexPath, taskName: taskName)
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            dataManager.removeTask(id: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            let task = taskList[indexPath.row]
+            taskList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            storageManager.removeTask(task: task)
         }
     }
     
@@ -60,10 +65,10 @@ class TaskListTableViewController: UITableViewController {
         if isEdit {
             alertTitle = "Edit Task"
             addEditButtonTitle = "Edit"
-            editAddFunctionName = dataManager.isTaskEdited
+            editAddFunctionName = storageManager.isTaskEdited
             indexPathRow = indexPath.row
         } else {
-            editAddFunctionName = dataManager.isAddedTask
+            editAddFunctionName = storageManager.isAddedTask
             alertTitle = "Add new Task"
             addEditButtonTitle = "Add"
         }
@@ -80,6 +85,7 @@ class TaskListTableViewController: UITableViewController {
             guard let taskName = self.alertViewController.textFields?.first?.text else { return }
 
             if editAddFunctionName(indexPathRow, taskName) {
+                self.taskList = self.storageManager.getTasks()
                 self.tableView.reloadData()
             } else {
                 self.showDublicateAlert(isEdited: isEdit)

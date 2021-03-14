@@ -14,7 +14,7 @@
 		E7C90D8625FBD4AB008C1913 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C90D7625FBD4AB008C1913 /* Task.swift */; };
 		E7C90D8725FBD4AB008C1913 /* Extension + NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C90D7825FBD4AB008C1913 /* Extension + NSObject.swift */; };
 		E7C90D8825FBD4AB008C1913 /* Extension + UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C90D7925FBD4AB008C1913 /* Extension + UITableView.swift */; };
-		E7C90D8925FBD4AB008C1913 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C90D7B25FBD4AB008C1913 /* DataManager.swift */; };
+		E7C90D8925FBD4AB008C1913 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C90D7B25FBD4AB008C1913 /* StorageManager.swift */; };
 		E7C90D8A25FBD4AB008C1913 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C90D7D25FBD4AB008C1913 /* LaunchScreen.storyboard */; };
 		E7C90D8B25FBD4AB008C1913 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7C90D8025FBD4AB008C1913 /* Main.storyboard */; };
 		E7C90D8C25FBD4AB008C1913 /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C90D8225FBD4AB008C1913 /* TaskListTableViewController.swift */; };
@@ -32,7 +32,7 @@
 		E7C90D7625FBD4AB008C1913 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		E7C90D7825FBD4AB008C1913 /* Extension + NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension + NSObject.swift"; sourceTree = "<group>"; };
 		E7C90D7925FBD4AB008C1913 /* Extension + UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension + UITableView.swift"; sourceTree = "<group>"; };
-		E7C90D7B25FBD4AB008C1913 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		E7C90D7B25FBD4AB008C1913 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		E7C90D7E25FBD4AB008C1913 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7C90D8125FBD4AB008C1913 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7C90D8225FBD4AB008C1913 /* TaskListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		E7C90D7A25FBD4AB008C1913 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				E7C90D7B25FBD4AB008C1913 /* DataManager.swift */,
+				E7C90D7B25FBD4AB008C1913 /* StorageManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -220,7 +220,7 @@
 				E7C90D5625FBD2A9008C1913 /* AppDelegate.swift in Sources */,
 				E7C90D8D25FBD4AB008C1913 /* TaskTableViewCell.swift in Sources */,
 				E7C90D5825FBD2A9008C1913 /* SceneDelegate.swift in Sources */,
-				E7C90D8925FBD4AB008C1913 /* DataManager.swift in Sources */,
+				E7C90D8925FBD4AB008C1913 /* StorageManager.swift in Sources */,
 				E7C90D6025FBD2A9008C1913 /* TaskListCoreData.xcdatamodeld in Sources */,
 				E7C90D8725FBD4AB008C1913 /* Extension + NSObject.swift in Sources */,
 				E7C90D8C25FBD4AB008C1913 /* TaskListTableViewController.swift in Sources */,
