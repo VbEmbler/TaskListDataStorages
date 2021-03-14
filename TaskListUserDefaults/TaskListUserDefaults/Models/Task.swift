@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Task {
+struct Task: Codable {
     
     //MARK: - Public Properties
     let id: Int

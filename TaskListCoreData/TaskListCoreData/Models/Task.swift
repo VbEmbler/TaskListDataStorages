@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Task {
+struct Tasks {
     
     //MARK: - Public Properties
     let id: Int
